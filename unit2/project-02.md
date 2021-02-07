@@ -29,31 +29,12 @@ the provided site architecture.
 
 __Feed sources:__
 
-Give the user the ability to pull from a multiple news sources. Here are two news sources we suggest:
+Give the user the ability to pull from a multiple news sources. Here are a few news sources we suggest:
 
 - [NPR One](http://dev.npr.org/)
+- [News API](https://newsapi.org/)
 - [Hearst publishing group](http://developer.hearst.com/) (Cosmopolitan, Elle, Popular Mechanics, Road and Track, etc.)
-
-You should also feel free to use other news APIs; however, you will find that many APIs that do not support either [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) or [JSONp](https://en.wikipedia.org/wiki/JSONP) will result in a cross-domain restriction error ("No 'Access-Control-Allow-Origin' header is present...") in the browser. To get around this, you can use the following proxy server to filter your API requests.
-
-Let's say you wanted to use the Digg API, which has the following endpoint:
-
-`http://digg.com/api/news/popular.json`
-
-If you preface the request with the proxy server API as follows...
-
-`https://accesscontrolalloworiginall.herokuapp.com/http://digg.com/api/news/popular.json`
-
-...you should be able to use the Digg API without encountering a cross-domain restriction error. Here's a code example of how you might use the proxy server:
-
-```js
-$.get("https://accesscontrolalloworiginall.herokuapp.com/http://digg.com/api/news/popular.json", function(results){
-  console.log(results);
-  results.data.feed.forEach(function(result){
-    $("ul").append("<li>"+result.content.title+"</li>")
-  })
-})
-```
+- [Reddit](https://www.reddit.com/top.json)
 
 If you use your own feeds, they must have APIs with the following minimum
 requirements:
@@ -113,6 +94,50 @@ __Additional UI interaction rules:__
    cleared, all articles should display in the respective feed.
 3. Add infinite scrolling. Start displaying only the first 20 articles and keep
    loading more on user scrolling.
+4. To avoid long load times every time you go to the homepage, try storing the data locally, try looking into the browsers `localStorage`. Also try implementing a time frame so that your website knows to only retrieve new data from the APIs after a certain amount of time has passed.
+
+---
+
+### Common Issues
+
+#### CORS Issues
+You will find that many APIs that do not support either [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) or [JSONp](https://en.wikipedia.org/wiki/JSONP) will result in a cross-domain restriction error ("No 'Access-Control-Allow-Origin' header is present...") in the browser. To get around this, you can use the following proxy server to filter your API requests.
+
+Let's say you wanted to use the Reddit API, which has the following endpoint:
+
+`https://www.reddit.com/top.json`
+
+If you preface the request with the proxy server API as follows...
+
+`https://accesscontrolalloworiginall.herokuapp.com/https://www.reddit.com/top.json`
+
+...you should be able to use the Reddit API without encountering a cross-domain restriction error. Here's a code example of how you might use the proxy server:
+
+```js
+let apiCall = fetch('https://accesscontrolalloworiginall.herokuapp.com/https://www.reddit.com/top.json');
+
+apiCall
+  .then(res => res.json())
+  .then(results => {
+    console.log(results.data.children);
+    results.data.children.forEach(function(result){
+      renderRows(result.data.title);
+    });
+  })
+  .catch(err => console.log(err));
+```
+
+#### Request location
+
+APIs have certain restrictions and for good reason. Here is an issue you may run into using the News API:
+```js
+{
+  status: "error", 
+  code: "corsNotAllowed", 
+  message: "Requests from the browser are not allowed on the Developer plan, except from localhost."}
+```
+In that case, we have done this before. We will have to launch a local server. Either use VS Code's Live Server extension or run the `http-server` command. From there replace the url with followed by the port number is opened on `localhost:<PORT NUMBER>`
+
 
 ---
 
@@ -129,26 +154,34 @@ __Additional UI interaction rules:__
 
 ### Getting Started
 
-Begin by "forking" the starter code repository. You can do so by clicking the "Fork" icon on
-the top right of [this](https://github.com/generalassembly-studio/JS-Unit-2-Project-Starter-Code) page. Once
-complete, clone the repository to your computer by running the following
-commands:
+Begin by looking at the starter code [here](https://github.com/generalassembly-studio/JS-Unit-2-Project-Starter-Code). Make sure you have the starter code on local machine:
 
 ```
-cd ~/Sites/
-git clone https://github.com/<your-username-here>/feedr.git
-cd feedr
+$ git pull upstream master
+```
+Remember to commit as you complete different functions and features:
+```
+$ git add .
+$ git commit -m "A description of what was added"
+$ git push -u origin master
 ```
 
-You can then open Sublime Text and point it at the `~/Sites/feedr` directory and
-work on the below steps. As you accomplish a feature, be sure to commit it in
-Git with the following commands:
 
-```
-git add .
-git commit -m "A description of what was added"
-git push -u origin master
-```
+## Suggested Ways to Get Started
+
+> Below are some more specific ways for ways in which you can help students get started on the project.
+
+  - Start by adding all the DOM functionality first.
+  - Map out all of the needed fields/properties from each respective feed.
+  - Start by doing a `console.log` of the incoming feeds to confirm you have a
+    successful transaction before you start mapping anything out.
+  - Make sure you have the [JSON View chrome extension](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en)
+    to get a clean view of the JSON dump in your browser.
+  - Think about ways to best standardize all of your incoming data.
+  - Test small pieces of functionality frequently, to make sure everything is
+    working.
+  - Use tools such as Stack Overflow, Google and documentation resources to solve
+    problems.
 
 Here are some sugestions on where to start:
 
