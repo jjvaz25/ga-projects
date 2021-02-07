@@ -134,9 +134,10 @@ APIs have certain restrictions and for good reason. Here is an issue you may run
 {
   status: "error", 
   code: "corsNotAllowed", 
-  message: "Requests from the browser are not allowed on the Developer plan, except from localhost."}
+  message: "Requests from the browser are not allowed on the Developer plan, except from localhost."
+}
 ```
-In that case, we have done this before. We will have to launch a local server. Either use VS Code's Live Server extension or run the `http-server` command. From there replace the url with followed by the port number is opened on `localhost:<PORT NUMBER>`
+In that case, we have done this before. We will have to launch a local server. Either use VS Code's Live Server extension or run the `http-server` command. From there replace the url with `localhost:` followed by the port number is opened on. Should look like this: `localhost:<PORT NUMBER>`
 
 
 ---
