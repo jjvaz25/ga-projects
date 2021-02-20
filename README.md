@@ -1,4 +1,4 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) JavaScript Unit Projects (3:00)
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) JavaScript Unit Projects
 
 See the [feedback guidelines](project-feedback.md) to read more about how we provide feedback to students.
 
@@ -36,25 +36,13 @@ For the final project, you'll be designing and building a single page web applic
 - **[Detailed Spec File](unit4/project-04.md)**
 
 
-### Project Submissions: Unit 1 and Final Project
+### Project Submission:
 
-* Using [these](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/) docs and/or what you learned from class:
-
-  * create a new local repository
-  * create a repository on GitHub
-  * link your local and remote repositories
-  * add any starter code to your local repository (this is not described in the docs)
-  * push your work to GitHub
-
-* Once you have pushed your work to GitHub, be sure to send your project's GitHub URL to your instructional team
-
-### Project Submission: Unit 2
-
-* Create a fork of [this](https://github.com/generalassembly-studio/JS-Unit-2-Project-Starter-Code) repository that describes the Unit 2 project
+* Create a fork of this repo
 * Clone your forked repository using [these docs](https://help.github.com/articles/cloning-a-repository/) and/or what you learned from class
 * Work! While your working be sure to:
 
-  * `git add .` to add all of your changes to your repository
+  * `git add -A` to add all of your changes to your repository
   * `git commit -m "your commit message"` to commit your changes locally
   * `git push origin master` to push your changes to your own fork!
 
