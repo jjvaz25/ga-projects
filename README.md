@@ -40,6 +40,7 @@ For the final project, you'll be designing and building a single page web applic
 
 * Create a fork of this repo
 * Clone your forked repository using [these docs](https://help.github.com/articles/cloning-a-repository/) and/or what you learned from class
+* Remember to create your own folder with your name as a unique identifier ex. `/unit1/unit1-KyleL`
 * Work! While your working be sure to:
 
   * `git add -A` to add all of your changes to your repository
