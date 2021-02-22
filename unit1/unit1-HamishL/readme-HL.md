@@ -1,13 +1,13 @@
-# ![](https://pbs.twimg.com/profile_images/617816167558680576/yRunA7ZC_400x400.jpg) Unit 1: SlackerBot, by Hamish Lang
+# ![](https://pbs.twimg.com/profile_images/617816167558680576/yRunA7ZC_400x400.jpg =75x75) Unit 1: SlackerBot, by Hamish Lang
 
 ### Overview
 
-Robots aren't always up to just do whatever you want. Some robots understand that it is smart to preserve their power. At least that's what they tell them selves.
+Robots aren't always up to just do whatever you want. Some robots understand that it's smart to preserve their power. At least that's what they tell them selves.
 
 SlackerBot is conversational and uses a small amount of randomness within functions to ensure repeated uses have variety. 
 
 
-### SlackerBot Functions
+### SlackerBot Functions Overview
 
 __Basic Call and response__
 
@@ -20,8 +20,6 @@ Send lets you send a message to the Slack channel. We usually use this hand-in-h
 __Hero Lists__
 
 Reply lets you reply to a certain user or to the person who sent the original message. This includes the @ in front of the user's name so they get alerted.
-
-__Random__
 
 
 ---
