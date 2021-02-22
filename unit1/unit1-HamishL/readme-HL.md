@@ -1,4 +1,4 @@
-# ![](https://pbs.twimg.com/profile_images/617816167558680576/yRunA7ZC_400x400.jpg =75x75) Unit 1: SlackerBot, by Hamish Lang
+# ![](https://i.pinimg.com/236x/28/92/73/2892734ea4a41e25c9c93bcce990e53c--lol-quotes-daily-quotes.jpg) Unit 1: SlackerBot, by Hamish Lang
 
 ### Overview
 
