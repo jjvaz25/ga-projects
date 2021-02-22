@@ -1,4 +1,5 @@
-# ![](https://i.pinimg.com/236x/28/92/73/2892734ea4a41e25c9c93bcce990e53c--lol-quotes-daily-quotes.jpg) Unit 1: SlackerBot, by Hamish Lang
+[](https://i.pinimg.com/236x/28/92/73/2892734ea4a41e25c9c93bcce990e53c--lol-quotes-daily-quotes.jpg) 
+# !Unit 1: SlackerBot, by Hamish Lang
 
 ### Overview
 
