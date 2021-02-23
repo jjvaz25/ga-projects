@@ -4,111 +4,73 @@
 
 ### Overview
 
-Robots aren't always up to just do whatever you want. Some robots understand that it's smart to preserve their power. At least that's what they tell them selves.
+Robots aren't always up to just do whatever you want. Some robots understand that it's smart to preserve their power. At least that's what they tell themselves.
 
 SlackerBot is conversational and uses a small amount of randomness within functions to ensure repeated uses have variety. 
 
+The idea came about as I has initially having issues with hubot working. I created my first call asking it if it works, in which it would say it never did. I guess I couldn't shake off the idea that my bot was lazy, so decided to build upon that. 
 
 ### SlackerBot Functions Overview
 
 __Basic Call and response__
 
-Using the Respond command, will search through a series of text that you give it and if it sees the text in the Slack channel, this function will execute. You can then use the Send command to post a message to the channel.
+#### Do you even work?
+
+This is used to test if the bot is on. This was the first call written and inspired the vibe of SlackerBot
+
+#### Do you like _X_?
+
+First IF usage. Questions that can be asked:
+- Do you like not working?
+- Do you like working hard?
+- Do you like doing nothing?
+
+Anything that doesn't fit into the above questions will return _'nah'_.
+
+#### What do you like?
+
+This is used to ask SlackerBot what they like. It returns one item randomly from an array. You can additionally give feedback on their answer and it will respond with either a positive reaction or negative reaction
+
+- What do you like? 
+
+Returns result. User can then say something in reaction to that:
+**Reactions**
+- User positive: _cool, awesome, me too,love it,hell yeah,the best,thumbs up emoji, nice one._
+- User negative: _gross, that sucks, really, you can do better, you are basic, how original, I would have never guessed_
 
 __Lazy Maths__
 
-Send lets you send a message to the Slack channel. We usually use this hand-in-hand with respond. For example, when someone says something (i.e. 'Hi') on the channel, we respond by sending "Howdy". Of course, it will only send or respond based on the commands and words you teach it (by adding it to your code).
+You can ask SlackerBot basic math questions in the form of **What is 1 plus 1**.
+
+You can use either actual number (1-9, and multiple digits), or written number up to nine. 
+
+You can use addition, subtraction, multiplication or divided by. You can either write the operator or use +, -, * or /.
+
+Slackerbot will then go through a sequence that has a maximum of 5 messages to output the answer. The sequence is used to humanize the response, and like a good slacker bot, they are pained that you're even asking them the question.
+
+Each step of the five outputted sequences are randomized from separate arrays. This helps keep each experience completly different from the last. Emojis are used through out, to help express the pain that SlackerBot feels about having to do work. 
+
+**Additional Notes**
+- Part of the output includes a wrong number which is based on the answer, though due to the way this is calculated it doesnt work for answers less than 3. If the answer is less than 3 the outputted sequence is much smaller, and the response is same
+- Lazy Math uses, random arrays, random numbers, functions in objects to convert operators, a borrowed delay timer which uses a promise. Nested if / else statements and for loops. 
 
 __Hero Lists__
 
-Reply lets you reply to a certain user or to the person who sent the original message. This includes the @ in front of the user's name so they get alerted.
+You can ask slacker bot Who are your current x heroes. You can got up to 7. You can input either a real number or written number. 
 
+This prints out a random array of heroes, formatted as Slack hyperlinks. The order of array is randomised each time, I did this rather than using the random function as it ensures none are repeated.
 
----
-
-### Technical Requirements
-
-Your app must:
-
-* Have a message post to Slack based on user input
-* Do at least 3 different things.
-* Leverage a for loop to iterate over a collection
-* Use at least 1 conditional to change the outcome of a Slackbot.
-
-#### Bonus
-
-* Introduce a random component
-* Include an image in the response in addition to text
+The final sequence bookends statements letting you know the first and last item. There is also a random emoji on the final print out and each message is slightly delayed using the for loop variable iterator to increase the delay time to ensure the messages come one after another. 
 
 ---
 
-### Necessary Deliverables
+### If I had three more weeks I would
 
-* A **working Slackbot, built by you**, that can be run in the class Slack room.
-* A **new git repository hosted on Github**, where codebase is maintained.
-* **A ``readme.md`` file** with explanations of what your bot does, what commands it responds to, the approach taken, installation instructions, unsolved problems, etc.
 
----
+* Learn more about regex to open up possibilities
+* Increase number of heroes and add some conditions for smaller numbers and randomised output when the user request exceeds the array amount.
 
-### Suggested Ways to Get Started
+Enjoy Slackerbot!!!
 
-* Review existing Slackbots and Hubots for inspiration.
-* Begin by writing down what your different commands will be and expected outcomes before writing any code.
-* Write pseudocode before writing any code.
-* Get Hubot working out of the box before writing any custom code.
-* Test small pieces of functionality frequently to make sure everything is working.
-* Use tools such as Stack Overflow, Google and documentation resources to solve problems.
+# ![](https://www.denofgeek.com/wp-content/uploads/2019/01/brooklyn-nine-nine-hitchcock-scully-s6e2.jpg) 
 
----
-
-### Potential Project Ideas
-
-##### Class today
-Ask your bot whether we have class today or not. Use JavaScript to check today's date and then respond back with whether we have class or not.
-
-##### Random quote
-Use an array to store a number of your favorite quotes. When you ping your bot, have it return a random quote from your list.
-
----
-
-### Useful Resources
-
-Key Resources
-* [Hubot Scripting](https://github.com/github/hubot/blob/master/docs/scripting.md)
-* [Hubot adapter for Slack](https://github.com/slackhq/hubot-slack)
-* [Slack API Documentation](https://api.slack.com/bot-users)
-
-Examples
-* [Hubot Ship It](https://github.com/hubot-scripts/hubot-shipit)
-* [Slackbot Community](https://api.slack.com/community)
-* [Hubot scripts](https://github.com/github/hubot-scripts)
-
-Advanced Reading
-* [Great in-depth tutorial on writing a Slackbot](http://www.michikono.com/2015/07/10/in-depth-tutorial-on-writing-a-slackbot/)
-* [Hubot scripts explained](http://theprogrammingbutler.com/blog/archives/2011/10/28/hubot-scripts-explained/)
-* [Create your own chatbot with Hubot & Coffeescript](http://www.slideshare.net/rscaduto/hubot-talk)
-* [Getting Started with Slackbots](http://www.sitepoint.com/getting-started-slack-bots/)
-
----
-
-### Project Feedback + Evaluation
-
-Students will create a new repository on GitHub called "my-first-slackbot" and push their code to this new repository when they are ready to submit.
-
-The instructional team will grade each technical requirement and provide a numeric grade on a scale.
-
-* __Technical Requirements__: Did you deliver a project that met all the technical requirements? Given what the class has covered so far, did you build something that was reasonably complex?
-
-* __Creativity__: Did you added a personal spin or creative element into your project submission? Did you deliver something of value to the end user (not just a hello world response)?
-
-* __Code Quality__: Did you follow code style guidance and best practices covered in class, such as spacing, modularity, and semantic naming? Did you comment your code as your instructors have in class?
-
-* __Total__: Your instructors will give you a total score on your project between:
-
-    Score | Expectations
-    ----- | ------------
-    **0** | _Does not meet expectations._
-    **1** | _Meets expectactions, good job!_
-    **2** | _Exceeds expectations, you wonderful creature, you!_
-
-This will serve as a helpful overall gauge of whether you met the project goals, but __the more important scores are the individual ones__ above, which can help you identify where to focus your efforts for the next project!
