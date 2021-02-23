@@ -13,7 +13,7 @@ The idea came about as I was initially having issues with hubot working. I creat
 
 ### SlackerBot Functions Overview
 
-__Basic Call and response__
+__:raising_hand: Basic Call and response__
 
 There are three call and responses:
 
@@ -41,7 +41,7 @@ Returns result. User can then say something in reaction to that:
 - :smiley: User positive: _cool, awesome, me too,love it,hell yeah,the best,thumbs up emoji, nice one._
 - :unamused: User negative: _gross, that sucks, really, you can do better, you are basic, how original, I would have never guessed_
 
-__Lazy Maths__
+__:sleeping: Lazy Maths__
 
 You can ask SlackerBot basic math questions in the form of **What is 1 plus 1**.
 
@@ -57,7 +57,7 @@ Each step of the five outputted sequences are randomized from separate arrays. T
 - Part of the output includes a wrong number which is based on the answer, though due to the way this is calculated it doesnt work for answers less than 3. If the answer is less than 3 the outputted sequence is much smaller, and the response is same
 - Lazy Math uses, random arrays, random numbers, functions in objects to convert operators, a borrowed delay timer which uses a promise. Nested if / else statements and for loops. 
 
-__Hero Lists__
+__:two_hearts: Hero Lists__
 
 You can ask slacker bot Who are your current x heroes. You can got up to 7. You can input either a real number or written number. 
 
