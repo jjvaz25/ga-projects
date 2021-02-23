@@ -72,8 +72,9 @@ The final sequence bookends statements letting you know the first and last item.
 
 * Learn more about regex to open up more user input possibilities.
 * Increase the number of heroes and add some conditions for smaller numbers and randomized output when the user request exceeds the array amount.
+* Fix the reaction in the what do you like sequence so other questions clear it, disabling it from being used at any other time (it will allow the reaction once after, at any point currently)
 
-Enjoy Slackerbot!!!
+Enjoy SlackerBot!!!
 
 # ![](https://www.denofgeek.com/wp-content/uploads/2019/01/brooklyn-nine-nine-hitchcock-scully-s6e2.jpg) 
 
