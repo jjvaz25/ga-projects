@@ -96,8 +96,6 @@ Advanced Reading
 
 ### Project Feedback + Evaluation
 
-Students will create a new repository on GitHub called "my-first-slackbot" and push their code to this new repository when they are ready to submit.
-
 The instructional team will grade each technical requirement and provide a numeric grade on a scale.
 
 * __Technical Requirements__: Did you deliver a project that met all the technical requirements? Given what the class has covered so far, did you build something that was reasonably complex?
