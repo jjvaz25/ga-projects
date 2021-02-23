@@ -1,6 +1,7 @@
-# ![](https://i.pinimg.com/236x/28/92/73/2892734ea4a41e25c9c93bcce990e53c--lol-quotes-daily-quotes.jpg) 
+# [](https://i.pinimg.com/236x/28/92/73/2892734ea4a41e25c9c93bcce990e53c--lol-quotes-daily-quotes.jpg) 
 
-# Unit 1: SlackerBot, by Hamish Lang
+# Unit 1: SlackerBot 
+by Hamish Lang
 
 ### Overview
 
@@ -8,17 +9,18 @@ Robots aren't always up to just do whatever you want. Some robots understand tha
 
 SlackerBot is conversational and uses a small amount of randomness within functions to ensure repeated uses have variety. 
 
-The idea came about as I has initially having issues with hubot working. I created my first call asking it if it works, in which it would say it never did. I guess I couldn't shake off the idea that my bot was lazy, so decided to build upon that. 
+The idea came about as I was initially having issues with hubot working. I created my first call asking it if it works, in which it would say it never did. I guess I couldn't shake off the idea that my bot was lazy, so decided to build upon that. 
 
 ### SlackerBot Functions Overview
 
 __Basic Call and response__
+There are three Call and responses:
 
-#### Do you even work?
+#### 1. Do you even work?
 
 This is used to test if the bot is on. This was the first call written and inspired the vibe of SlackerBot
 
-#### Do you like _X_?
+#### 2. Do you like _X_?
 
 First IF usage. Questions that can be asked:
 - Do you like not working?
@@ -27,7 +29,7 @@ First IF usage. Questions that can be asked:
 
 Anything that doesn't fit into the above questions will return _'nah'_.
 
-#### What do you like?
+#### 3. What do you like?
 
 This is used to ask SlackerBot what they like. It returns one item randomly from an array. You can additionally give feedback on their answer and it will respond with either a positive reaction or negative reaction
 
@@ -67,8 +69,8 @@ The final sequence bookends statements letting you know the first and last item.
 ### If I had three more weeks I would
 
 
-* Learn more about regex to open up possibilities
-* Increase number of heroes and add some conditions for smaller numbers and randomised output when the user request exceeds the array amount.
+* Learn more about regex to open up more user input possibilities.
+* Increase the number of heroes and add some conditions for smaller numbers and randomized output when the user request exceeds the array amount.
 
 Enjoy Slackerbot!!!
 
