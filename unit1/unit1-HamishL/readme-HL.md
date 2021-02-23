@@ -14,11 +14,12 @@ The idea came about as I was initially having issues with hubot working. I creat
 ### SlackerBot Functions Overview
 
 __Basic Call and response__
-There are three Call and responses:
+
+There are three call and responses:
 
 #### 1. Do you even work?
 
-This is used to test if the bot is on. This was the first call written and inspired the vibe of SlackerBot
+This is used to test if the bot is on. This was the first call written and inspired the vibe of SlackerBot.
 
 #### 2. Do you like _X_?
 
@@ -31,14 +32,14 @@ Anything that doesn't fit into the above questions will return _'nah'_.
 
 #### 3. What do you like?
 
-This is used to ask SlackerBot what they like. It returns one item randomly from an array. You can additionally give feedback on their answer and it will respond with either a positive reaction or negative reaction
+This is used to ask SlackerBot what they like. It returns one item randomly from an array. You can additionally give feedback on their answer and it will respond with either a positive reaction or negative reaction.
 
 - What do you like? 
 
 Returns result. User can then say something in reaction to that:
 **Reactions**
-- User positive: _cool, awesome, me too,love it,hell yeah,the best,thumbs up emoji, nice one._
-- User negative: _gross, that sucks, really, you can do better, you are basic, how original, I would have never guessed_
+- :smiley: User positive: _cool, awesome, me too,love it,hell yeah,the best,thumbs up emoji, nice one._
+- :unamused: User negative: _gross, that sucks, really, you can do better, you are basic, how original, I would have never guessed_
 
 __Lazy Maths__
 
