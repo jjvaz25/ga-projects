@@ -43,7 +43,7 @@ Returns result. User can then say something in reaction to that:
 
 __:sleeping: Lazy Maths__
 
-You can ask SlackerBot basic math questions in the form of **What is 1 plus 1**.
+You can ask SlackerBot basic math questions in the form of **What is five plus 100**.
 
 You can use either actual number (1-9, and multiple digits), or written number up to nine. 
 
