@@ -39,13 +39,6 @@ function capitalize(stringValue) {
 };
 
   robot.respond(/Random animal\s*(!l:[^!]*)*(!d:[^!]*)*(!a:[^!]*)*/i, (res) => {
-
-       
-    // let locationMatch = res.match[0].match(/!l:[^!]*/i)[0];
-    // let descriptorMatch = res.match[0].match(/!d:[^!]*/i)[0];
-    // let animalMatch = res.match[0].match(/!d:[^!]*/i)[0];    
-
-    // let inputLocation = locationMatch ? locationMatch.replace("!l:", "").trim() : '';
     
     // Create sentence pieces based off user input. If no user input, use random values.
     let phrase = generateRandomArrayValue(exclamations);
