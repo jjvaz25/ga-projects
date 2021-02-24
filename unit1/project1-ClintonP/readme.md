@@ -65,9 +65,9 @@ Clintbot recognizes the following commands:
 
 When developing Clintbot, I wanted to create something simple, but varied. Interacting with Clintbot should feel like a combination of expected call-and-response and randomness.
 
-I first created the mock command as a way to give the bot some character. After that, I decided to introduce some humor. The fake animal generator is based off a theory a friend of mine has that in order to create a realistic sounding animal species, you just need a location, an action, and a species.
+I first created the "mock" command as a way to give the bot some character. After that, I decided to introduce some humor. The fake animal generator is based off a theory a friend of mine has that in order to create a realistic sounding animal species, you just need a location, an action, and a species.
 
-After these two, I wanted to add something that gave the user a chance to give some input, rather than just watch Clintbot spout nonsense. Rock, paper, scissors is a game that is simple enough for a beginner (me) to code, but allows the user to make a choice that ultimately affects the outcome. Continuing on this theme I decided to return to the animal generator and allow the user to control each of the three species components should they wish to restrict the randomness to some degree.
+After these two, I wanted to add something that gave the user a chance to give some input, rather than just watch Clintbot spout nonsense. Rock, paper, scissors is a game that is simple enough to execute, but allows the user to make a choice that ultimately affects the outcome. Continuing on this theme I decided to return to the animal generator and allow the user to control each of the three species components should they wish to restrict the randomness to some degree.
 
 Finally, I wanted to implement a response option that did not have a specific input, but rather could be unexpectedly triggered for a fun surprise. After researching regular expressions, I came up with a pattern that detects alliteration in the user's sentences. Clintbot randomly chiming in to inform the user of their worldplay is a small thing, but gives the bot some unique character and functionality.
 
