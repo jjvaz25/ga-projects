@@ -74,4 +74,87 @@ robot.hear(/Random wolf gif/i, function (res) {
     return
 })
 
+
+
+// *PLEASE IGNORE*  Based on a game I made in CODECADEMY, I tried to make this Rock, Paper, Scissors game work but was unable to do so -__- 
+
+
+// robot.respond(/Hi (.*), lets play a game/i, function(msg) {
+//     var name;
+//     name = msg.match[1];
+//     if (name == "Wolf"){
+//       return msg.send("Sure, let's play rock, paper, sissors");
+//     } else {
+//       return msg.reply("Sure, what would you like to play?");
+//     }
+//   });
+
+
+// robot.hear(userInput) {
+//     getUserChoice = userInput
+//     userInput = userInput.toLowerCase();
+//     if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb') {
+//       return userInput;
+//     } else {
+//       robot.respond(/Error, please type: rock, paper or scissors/)
+//     }
+//   });
+
+//   const getBotChoice = () => {
+//     const randomNumber = Math.floor(Math.random() * 3);
+//     switch (randomNumber) {
+//       case 0:
+//         return 'rock';
+//       case 1:
+//         return 'paper';
+//       case 2:
+//         return 'scissors';
+//     }
+//   }
+
+//   const determineWinner = (userChoice, botChoice) => {
+//     if (userChoice === botChoice) {
+//       return 'This game is a tie'
+//     }
+//     if (userChoice === 'rock') {
+//       if (botChoice === 'paper') {
+//         return "Sorry, Wolf won!";
+//       } else {
+//         return "Congratulations, you won!";
+//       }
+//     }
+
+//     if (userChoice === 'paper') {
+//       if (botChoice === 'scissors') {
+//         return "Sorry, Wolf won!"
+//       } else {
+//         return "Congratulations, you won!";
+//       }
+//     }
+
+//     if (userChoice === 'scissors') {
+//       if (botChoice === 'rock') {
+//         return 'Sorry, Wolf won!'
+//       } else {
+//         return "Congratulations, you won!";
+//       }
+//     } 
+
+//     if (userChoice === 'bomb') {
+//       return "Congratulations, you won!";
+//     }
+//   };
+
+//   const playGame = () => {
+//     const userChoice = getUserChoice('paper');
+//     const botChoice = getBotChoice();
+//     console.log('You threw: ' + userChoice);
+//     console.log('The bot threw: ' + botChoice);
+//     console.log(determineWinner(userChoice, botChoice));  
+//   }
+
+//   playGame();
+
+// }
+
 }
