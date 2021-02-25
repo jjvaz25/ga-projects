@@ -20,8 +20,8 @@ Wolf Hubot (HB) is bot that does a couple of very simple things:
 > Hi Wolf, let's play a game
 - If you call WH by 'Wolf' he will suggest a game, if you call it something else it would respond with a question
 
-> My favorite vacations spot is [Instert place]
-- If you tell hubot your favorite vacation spot it will
+> My favorite vacations spot is [Instert city]
+- If you tell hubot your favorite vacation spot and it matches a city from an array of spots, it will tell you that it wants to visit, otherwise it will add it to its fav list
 
 > Random wolf gif
 - WH will select a random wolf gif from an array made up of 6 gif links from GIPHY
