@@ -1,6 +1,7 @@
 
 
-[WOLF HUBOT](https://media.giphy.com/media/i5uGgfCmUaGkg/giphy.gif)
+![WOLF HUBOT](https://media.giphy.com/media/i5uGgfCmUaGkg/giphy.gif)
+# WOLF HUBOT
 
 ### **What does Wolf Hubot do?**
 Wolf Hubot (HB) is bot that does a couple of very simple things: 
