@@ -62,7 +62,7 @@ const fetchThings = async (url) => {
 
 
 // Reddit API with Proxy
-let apiCall = fetch('https://accesscontrolalloworiginall.herokuapp.com/https://www.reddit.com/top.json');
+let apiCall = fetch('https://cors.bridged.cc/https://www.reddit.com/top.json');
 
 // apiCall
 //   .then(res => res.json())
@@ -77,7 +77,26 @@ let apiCall = fetch('https://accesscontrolalloworiginall.herokuapp.com/https://w
 //   .catch(err => console.log(err));
 
 function renderRows(data) {
-  $('#main').append(`
+  // jQuery way
+  // $('#main').append(`
+  //   <article class="article">
+  //     <section class="featuredImage">
+  //       <img src="${data.img}" alt="" />
+  //     </section>
+  //     <section class="articleContent">
+  //         <a href="${data.url}"><h3>${data.title}</h3></a>
+  //         <h6>Lifestyle - ${data.author}</h6>
+  //     </section>
+  //     <section class="impressions">
+  //       526
+  //     </section>
+  //     <div class="clearfix"></div>
+  //   </article>
+  // `);
+
+  // Vanilla js way
+  let article = document.createElement('article');
+  article.innerHTML = `
     <article class="article">
       <section class="featuredImage">
         <img src="${data.img}" alt="" />
@@ -91,7 +110,8 @@ function renderRows(data) {
       </section>
       <div class="clearfix"></div>
     </article>
-  `)
+  `;
+  document.getElementById('main').appendChild(article);
 }
 
 async function retrieveData(url, apiKey) {
@@ -99,7 +119,7 @@ async function retrieveData(url, apiKey) {
     const rawResponse = await fetch(url);
 
     if (!rawResponse.ok) {
-      throw new Error(rawResponse);
+      throw new Error(rawResponse.message);
     }
 
     if (rawResponse.status === 404) {
