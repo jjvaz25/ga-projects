@@ -109,12 +109,12 @@ Let's say you wanted to use the Reddit API, which has the following endpoint:
 
 If you preface the request with the proxy server API as follows...
 
-`https://accesscontrolalloworiginall.herokuapp.com/https://www.reddit.com/top.json`
+`https://cors.bridged.cc/https://www.reddit.com/top.json`
 
 ...you should be able to use the Reddit API without encountering a cross-domain restriction error. Here's a code example of how you might use the proxy server:
 
 ```js
-let apiCall = fetch('https://accesscontrolalloworiginall.herokuapp.com/https://www.reddit.com/top.json');
+let apiCall = fetch('https://cors.bridged.cc/https://www.reddit.com/top.json');
 
 apiCall
   .then(res => res.json())
