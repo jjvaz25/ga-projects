@@ -31,7 +31,7 @@ __Feed sources:__
 
 Give the user the ability to pull from a multiple news sources. Here are a few news sources we suggest:
 
-- [NPR One](http://dev.npr.org/)
+- [Chronicling America](https://chroniclingamerica.loc.gov/about/api/)
 - [News API](https://newsapi.org/)
 - [Hearst publishing group](http://developer.hearst.com/) (Cosmopolitan, Elle, Popular Mechanics, Road and Track, etc.)
 - [Reddit](https://www.reddit.com/top.json)
@@ -172,31 +172,14 @@ $ git push -u origin master
 
 > Below are some more specific ways for ways in which you can help students get started on the project.
 
-  - Start by adding all the DOM functionality first.
+  - Start by doing a `console.log` of the incoming feeds to confirm you have a successful transaction before you start mapping anything out
   - Map out all of the needed fields/properties from each respective feed.
-  - Start by doing a `console.log` of the incoming feeds to confirm you have a
-    successful transaction before you start mapping anything out.
-  - Make sure you have the [JSON View chrome extension](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en)
+  - Normalize the data from the feeds to get a uniform data set to work with
+  - Add the DOM functionality and populate the values from the API calls  
+  - (Optional) Have the [JSON View chrome extension](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en)
     to get a clean view of the JSON dump in your browser.
-  - Think about ways to best standardize all of your incoming data.
-  - Test small pieces of functionality frequently, to make sure everything is
-    working.
-  - Use tools such as Stack Overflow, Google and documentation resources to solve
-    problems.
-
-Here are some sugestions on where to start:
-
-- Start by adding all the DOM functionality first.
-- Map out all of the needed fields/properties from each respective feed.
-- Start by doing a console.log of the incoming feeds to confirm you have a
-  successful transaction before you start mapping anything out.
-- Make sure you have the [JSON View chrome extension](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?hl=en)
-  to get a clean view of the JSON dump in your browser.
-- Think about ways to best standardize all of your incoming data.
-- Test small pieces of functionality frequently, to make sure everything is
-  working.
-- Use tools such as Stack Overflow, Google and documentation resources to solve
-  problems.
+  - Test small pieces of functionality frequently, to make sure everything is working.
+  - Use tools such as Stack Overflow, Google and documentation resources to solve problems.
 
 ---
 
