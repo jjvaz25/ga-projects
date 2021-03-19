@@ -121,7 +121,7 @@ apiCall
   .then(results => {
     console.log(results.data.children);
     results.data.children.forEach(function(result){
-      renderRows(result.data.title);
+      // renderRows(result.data.title);
     });
   })
   .catch(err => console.log(err));
