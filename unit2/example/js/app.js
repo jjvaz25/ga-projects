@@ -25,44 +25,44 @@ let newsSources = [
 
   
 // Async Await Method, example from lesson 9
-const fetchThings = async (url) => {
-  try {
-    // fetch the raw response
-    const rawResponse = await fetch(url);
+// const fetchThings = async (url) => {
+//   try {
+//     // fetch the raw response
+//     const rawResponse = await fetch(url);
 
-    // fetch only rejects for network error or connection issues
+//     // fetch only rejects for network error or connection issues
 
-    // as a result, we need to handle different scenarios here
-    // rawResponse.ok is true if status code is between 200 - 299
-    if (!rawResponse.ok) {
-      throw new Error(rawResponse);
-    }
+//     // as a result, we need to handle different scenarios here
+//     // rawResponse.ok is true if status code is between 200 - 299
+//     if (!rawResponse.ok) {
+//       throw new Error(rawResponse);
+//     }
 
-    // could also key off status directly
-    if (rawResponse.status === 404) {
-      throw new Error('Not found');
-    }
+//     // could also key off status directly
+//     if (rawResponse.status === 404) {
+//       throw new Error('Not found');
+//     }
 
-    // if we made it this far, we're ok
-    // parse response into json
-    const jsonResponse = await rawResponse.json();
+//     // if we made it this far, we're ok
+//     // parse response into json
+//     const jsonResponse = await rawResponse.json();
 
-    // now we can do whatever we want with jsonResponse
-    // add elements to DOM, make more requests, etc.
-    console.log(jsonResponse);
-    jsonResponse.articles.forEach(function(result) {
-      console.log(result.title);
-      renderRows(result.title);
-    });
-  } catch (err) {
-    console.log('err', err);
-  }
-};
+//     // now we can do whatever we want with jsonResponse
+//     // add elements to DOM, make more requests, etc.
+//     console.log(jsonResponse);
+//     jsonResponse.articles.forEach(function(result) {
+//       console.log(result.title);
+//       renderRows(result.title);
+//     });
+//   } catch (err) {
+//     console.log('err', err);
+//   }
+// };
 // fetchThings(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${newsKey}`);
 
 
 // Reddit API with Proxy
-let apiCall = fetch('https://cors.bridged.cc/https://www.reddit.com/top.json');
+// let apiCall = fetch('https://cors.bridged.cc/https://www.reddit.com/top.json');
 
 // apiCall
 //   .then(res => res.json())
@@ -97,7 +97,6 @@ function renderRows(data) {
   // Vanilla js way
   let article = document.createElement('article');
   article.innerHTML = `
-    <article class="article">
       <section class="featuredImage">
         <img src="${data.img}" alt="" />
       </section>
@@ -109,8 +108,8 @@ function renderRows(data) {
         526
       </section>
       <div class="clearfix"></div>
-    </article>
   `;
+  article.classList.add('article')
   document.getElementById('main').appendChild(article);
 }
 
@@ -141,6 +140,8 @@ function normalizeData(data) {
     this.author = author;
     this.url = url;
     this.img = img;
+    //impressions
+    //category
   }
   for (let i = 0; i < data.length; i++) {
     let cleanData = [];
@@ -160,13 +161,16 @@ function normalizeData(data) {
 }
 
 async function init(sources) {
+  // step 1 retrieve data
   let promises = [];
   for (let i = 0; i < sources.length; i++) {
     promises.push(retrieveData(sources[i]));
   }
   const newsData = await Promise.all(promises);
+  // step 2 normalize data
   let cleanData = normalizeData(newsData);
 
+  // step 3 render to dom
   cleanData.forEach(function(sources) {
     sources.forEach(function(articles) {
       renderRows(articles);
